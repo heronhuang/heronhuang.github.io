@@ -1,39 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Import Package</title>
-
-<style>
-body { margin:0; font-family: Arial, sans-serif; display:flex; }
-.sidebar { width:260px; background:#1e1e1e; color:#fff; height:100vh; padding:20px; }
-.sidebar h2 { color:#fff; }
-.sidebar a.sub-menu { padding-left: 20px; font-size: 0.9em; } 
-.sidebar a { display:block; color:#ccc; text-decoration:none; padding:6px 0; }
-.sidebar a:hover { color:#fff; }
-.content { flex:1; padding:40px; }
-h1,h2 { color:#333; }
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyProtoBuffer - Import Package</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            color: #2d3436;
+        }
+        .sidebar {
+            width: 280px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 2rem 1.5rem;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        .sidebar h2 {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid #34495e;
+            text-align: center;
+        }
+        .product-tabs {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        .product-tabs li {
+            margin: 0.8rem 0;
+        }
+        .product-tabs a {
+            color: #bdc3c7;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.7rem;
+            display: block;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        .product-tabs a.active {
+            color: #fff;
+            background-color: #34495e;
+        }
+        .page-tabs {
+            list-style: none;
+        }
+        .page-tabs li {
+            margin: 0.6rem 0;
+        }
+        .page-tabs a {
+            color: #bdc3c7;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 0.5rem;
+            display: block;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+        .page-tabs a:hover, .page-tabs a.active {
+            color: #fff;
+            background-color: #34495e;
+        }
+        .main-content {
+            margin-left: 280px;
+            padding: 3rem 4rem;
+            flex: 1;
+            max-width: calc(100% - 280px);
+        }
+        .content-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 2.5rem;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+        .content-card h1 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .content-card h3 {
+            font-size: 1.3rem;
+            color: #3498db;
+            margin: 1.2rem 0 0.8rem;
+        }
+        .content-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            color: #495057;
+        }
+        .content-card ul {
+            padding-left: 1.8rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #495057;
+        }
+        .code-block {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            padding: 1.2rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+    </style>
 </head>
 <body>
+    <div class="sidebar">
+        <h2>Product & Documentation</h2>
+        <ul class="product-tabs">
+            <li><a href="index.html" class="active">EasyProtoBuffer</a></li>
+            <li><a href="#">ThickGlass (Coming Soon)</a></li>
+        </ul>
+        <h3 style="margin: 1rem 0 0.5rem; color: #fff;">EasyProtoBuffer Docs</h3>
+        <ul class="page-tabs">
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="import-package.html" class="active">1. Import Package</a></li>
+            <li><a href="import-sample.html">2. Import Sample</a></li>
+            <li><a href="global-version.html">3. Change Global Version</a></li>
+            <li><a href="proto-path.html">4. Modify Proto Path</a></li>
+        </ul>
+    </div>
 
-<div class="sidebar">
-    <h2>Products</h2>
-     <a href="index.html">Easy ProtoBuffer</a>
-    <a href="import_package.html" class="sub-menu">Import Package</a>
-    <a href="import_sample.html" class="sub-menu">Import Sample</a>
-    <a href="global_version.html" class="sub-menu">Global Version</a>
-    <a href="single_proto.html" class="sub-menu">Single Proto Output</a>
-    <hr/>
-    <a href="thickglass.html">ThickGlass</a>
-</div>
-
-<div class="content">
-
-<h1>Import Package</h1>
-<p>Import the Easy ProtoBuffer package via Unity Package Manager or .unitypackage file.</p>
-
-</div>
+    <div class="main-content">
+        <div class="content-card">
+            <h1>1. Import Package</h1>
+            <p>Import the EasyProtoBuffer package into your Unity project using the Unity Package Manager (UPM) to start using the tool. Follow the step-by-step guide below:</p>
+            
+            <h3>Step 1: Open Unity Package Manager</h3>
+            <p>Launch your Unity project, then go to the top menu bar and select <strong>Window &gt; Package Manager</strong>. This will open the Package Manager window.</p>
+            
+            <h3>Step 2: Add Package from Disk</h3>
+            <p>Click the "+" button in the top left corner of the Package Manager window, then select <strong>Add package from disk</strong> from the drop-down menu.</p>
+            
+            <h3>Step 3: Select the Package File</h3>
+            <p>Navigate to the folder where the EasyProtoBuffer package is stored, find and select the <code>package.json</code> file (the core file of the UPM package).</p>
+            
+            <h3>Step 4: Complete Import</h3>
+            <p>Click "Open" to confirm. Unity will automatically import the package and all its dependencies. Once the import is complete, the tool will be integrated into your project's asset pipeline, and you can start using its features.</p>
+            
+            <div class="code-block">
+                // Note: Ensure the package.json file contains the correct dependencies<br>
+                // Example package.json structure (simplified):<br>
+                {<br>
+                &nbsp;&nbsp;"name": "com.yourcompany.easyprotobuffer",<br>
+                &nbsp;&nbsp;"version": "1.0.0",<br>
+                &nbsp;&nbsp;"displayName": "EasyProtoBuffer",<br>
+                &nbsp;&nbsp;"description": "Automatic protobuf compilation tool for Unity"<br>
+                }
+            </div>
+            
+            <p>After importing, you can verify the package is installed by checking the "Installed Packages" list in the Package Manager.</p>
+        </div>
+    </div>
 </body>
 </html>
