@@ -114,6 +114,22 @@
             text-align: center;
             color: #6c757d;
         }
+        .feature-image-container {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .feature-image-container img {
+            max-width: 60%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .image-source {
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -129,8 +145,7 @@
         <h3 style="margin: 1rem 0 0.5rem; color: #fff;">EasyProtoBuffer Docs</h3>
         <ul class="page-tabs">
             <li><a href="index.html" class="active">Overview</a></li>
-            <li><a href="import-package.html">1. Import Package</a></li>
-            <li><a href="import-sample.html">2. Import Sample</a></li>
+            <li><a href="quick-start.html">1. Quick Start</a></li> 
             <li><a href="global-version.html">3. Change Global Version</a></li>
             <li><a href="proto-path.html">4. Modify Proto Path</a></li>
         </ul>
@@ -142,7 +157,10 @@
             <h1>Easy ProtoBuffer</h1>
             <p>Easy ProtoBuffer is a professional Unity editor tool designed to simplify the use of Google Protocol Buffers in Unity projects. It automatically compiles .proto files to C# scripts , seamless integration with Unity's asset pipeline, and a user-friendly workflow to reduce manual operations.</p>
             <p>This tool supports all 3.x versions of Protocol Buffers (customizable), is fully compatible with all Unity-supported platforms, and includes practical features to optimize your development efficiency.</p>
-            
+            <div class="feature-image-container">
+                <img src="images/1_lkVoYlzsAP1Vjdvh3WcCHA.png" alt="Key Features Overview">
+                <p class="image-source">Image Source: https://www.xenonstack.com/hubfs/google-protocol-buffers-xenonstack.png</p>
+            </div>
             <h3 style="margin: 1.5rem 0 0.8rem; color: #3498db;">Key Features</h3>
             <ul>
                 <li>Based on the official Google Protocol Buffers implementation</li>

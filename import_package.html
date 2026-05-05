@@ -119,6 +119,16 @@
             overflow-x: auto;
             margin: 1rem 0;
         }
+        .image-container {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 30%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
@@ -131,42 +141,46 @@
         <h3 style="margin: 1rem 0 0.5rem; color: #fff;">EasyProtoBuffer Docs</h3>
         <ul class="page-tabs">
             <li><a href="index.html">Overview</a></li>
-            <li><a href="import-package.html" class="active">1. Import Package</a></li>
-            <li><a href="import-sample.html">2. Import Sample</a></li>
-            <li><a href="global-version.html">3. Change Global Version</a></li>
-            <li><a href="proto-path.html">4. Modify Proto Path</a></li>
+            <li><a href="import-package.html" class="active">1. Quick Start</a></li> 
+            <li><a href="global-version.html">2. Change Global Version</a></li>
+            <li><a href="proto-path.html">3. Modify Proto Path</a></li>
         </ul>
     </div>
 
     <div class="main-content">
         <div class="content-card">
             <h1>1. Import Package</h1>
-            <p>Import the EasyProtoBuffer package into your Unity project using the Unity Package Manager (UPM) to start using the tool. Follow the step-by-step guide below:</p>
+            <p>Import the EasyProtoBuffer package into your Unity project:</p>
             
-            <h3>Step 1: Open Unity Package Manager</h3>
-            <p>Launch your Unity project, then go to the top menu bar and select <strong>Window &gt; Package Manager</strong>. This will open the Package Manager window.</p>
-            
-            <h3>Step 2: Add Package from Disk</h3>
-            <p>Click the "+" button in the top left corner of the Package Manager window, then select <strong>Add package from disk</strong> from the drop-down menu.</p>
-            
-            <h3>Step 3: Select the Package File</h3>
-            <p>Navigate to the folder where the EasyProtoBuffer package is stored, find and select the <code>package.json</code> file (the core file of the UPM package).</p>
-            
-            <h3>Step 4: Complete Import</h3>
-            <p>Click "Open" to confirm. Unity will automatically import the package and all its dependencies. Once the import is complete, the tool will be integrated into your project's asset pipeline, and you can start using its features.</p>
-            
-            <div class="code-block">
-                // Note: Ensure the package.json file contains the correct dependencies<br>
-                // Example package.json structure (simplified):<br>
-                {<br>
-                &nbsp;&nbsp;"name": "com.yourcompany.easyprotobuffer",<br>
-                &nbsp;&nbsp;"version": "1.0.0",<br>
-                &nbsp;&nbsp;"displayName": "EasyProtoBuffer",<br>
-                &nbsp;&nbsp;"description": "Automatic protobuf compilation tool for Unity"<br>
-                }
+            <h3>Step 1: Import Package</h3>
+            <p>Launch your Unity project, then go to the top menu bar and select <strong>Assets &gt; Import package&gt;Custom Package </strong>. Pick up "EasyProto.unitypackage" and import.</p>
+             <div class="image-container">
+                <img src="images/import-step1.png" alt="Easy ProtoBuffer Package">                
             </div>
+            <h3>Step 2: Import Sample</h3>
+            <p> On top menu bar,select <strong>Window &gt; Package Manager</strong>. Select Easy ProtoBuffer in the left side of the Package Manager window, then select  <strong>samples</strong> and import samples.</p>
+             <div class="image-container">
+                <img src="images/import-step2.png" alt="Easy ProtoBuffer Package">                
+            </div>
+            <h3>Step 3: Download Protoc and Runtime</h3>
+            <p>Importing the sample will trigger an automatic download; pressing "Download" will fetch the official protoc and Protocol Buffer runtime DLL (for .NET 20). If this window does not pop up, proceed to Step 4.</p> 
+             <div class="image-container">
+                <img src="images/import-step3.png" alt="Easy ProtoBuffer Package">                
+            </div>
+
+            <h3>Step 4: Manual Download (can be skipped if Step 3 works normally)</h3>
+            <p>Select any .proto file in your project, such as "GameMessage.proto" in the sample you just imported in Step 3. Select the .proto file and click the Compile button in the inspector panel, or right-click and choose "Reimport" — both actions will trigger the download window mentioned in Step 3.</p>
+             <div class="image-container">
+                <img src="images/import-step4.png" alt="Easy ProtoBuffer Package">                
+            </div> 
             
-            <p>After importing, you can verify the package is installed by checking the "Installed Packages" list in the Package Manager.</p>
+            <p>After downloading, the automatic compilation environment is set up successfully. Every .proto file in your project will be automatically converted to a C# file</p>
+
+            <h3>Step 5: Open Demo scene</h3>
+            <p>Open Demo scene,and press play</p>
+             <div class="image-container">
+                <img src="images/import-step5.png" alt="Easy ProtoBuffer Package">                
+            </div> 
         </div>
     </div>
 </body>
